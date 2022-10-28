@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Qr Code Maker</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/parakeet/240/FA5252/qr-code.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/neocotic/qrious/dist/qrious.min.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="input-section">
+            <input type="text" class="qr-content" placeholder="Enter Some Content">
+            <div class="generate-btn md-ripples ripples-light">
+                <i class="material-icons">qr_code</i>
+            </div>
+        </div>
+        <div class="output">
+            <span>QR Code Will Display Here</span>
+            <img alt="">
+        </div>
+        <div class="message">
+            Made With ❤️ By, <a href="https://github.com/sancho1952007" target="_blank">Sancho Godinho</a>
+        </div>
+    </div>
+
+    <div class="warning">
+        This Site Uses Google Adsense To Display Ads Which May Set Cookies On The Browser For Ad Tracking.<br><br>By
+        Continuing Using This Site, You Agree To This.&nbsp;<button class="md-ripples warning-close">Close</button>
+    </div>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400');
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('data:image/jpeg;base64,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');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .warning {
+        width: calc(100% - 10px);
+        position: fixed;
+        background-color: rgb(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+        left: 0;
+        bottom: 0;
+        font-family: monospace;
+        padding: 5px;
+        padding-bottom: 40px;
+        display: none;
+        animation: slide-in .50s linear;
+    }
+
+
+    .warning>button {
+        width: 100%;
+        height: 35px;
+        margin-top: 5px;
+        background-color: rgb(255, 255, 255, 0.2);
+        border: 0;
+        padding: 10px;
+        font-family: 'Barlow', sans-serif;
+        user-select: none;
+        cursor: pointer;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid rgb(53, 53, 53, 0.5);
+    }
+
+    .app {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(53, 53, 53, 0.4);
+        backdrop-filter: blur(0px);
+        overflow: auto;
+    }
+
+    .message {
+        color: rgb(228, 228, 228);
+        width: 100%;
+        font-family: 'Barlow', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        display: none;
+    }
+
+    .message>a {
+        all: unset;
+        color: lightblue;
+        text-decoration: underline;
+    }
+
+    .download-btn {
+        width: calc(100% - 20px);
+        padding: 10px;
+        text-align: center;
+        background-color: rgb(0, 0, 0, 0.3);
+        cursor: pointer;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        color: rgb(228, 228, 228);
+        user-select: none;
+    }
+
+    .output {
+        width: 100%;
+        height: calc(100% - 46px);
+        background-color: rgb(0, 0, 0, 0.2);
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 20px;
+        user-select: none;
+        text-align: center;
+    }
+
+    .output>img {
+        width: 100%;
+        pointer-events: none;
+        user-select: none;
+        max-width: 530px;
+        display: none;
+    }
+
+    .input-section {
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgb(53, 53, 53, 0.5);
+    }
+
+    .qr-content {
+        color: white;
+        width: calc(100% - 90px);
+        padding: 10px;
+        font-size: 17px;
+        border: 0;
+        background-color: transparent;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+    }
+
+    .qr-content::placeholder {
+        color: rgb(216, 216, 216);
+    }
+
+    .generate-btn {
+        width: 50px;
+        height: calc(100% - 20px);
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background-color: rgb(0, 0, 0, 0.3);
+        padding: 10px;
+        cursor: pointer;
+        user-select: none;
+        color: rgb(228, 228, 228);
+    }
+
+    @keyframes slide-in {
+        0% {
+            bottom: -150px;
+        }
+    }
+
+    @keyframes slide-out {
+        100% {
+            bottom: -150px;
+        }
+    }
+
+    * {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        flex-shrink: 0;
+    }
+</style>
+
+<script>
+    window.onload = () => {
+        if (localStorage.getItem('ad-use') == null || localStorage.getItem('ad-use') != "true") {
+            document.querySelector('.warning').style.display = 'block';
+        }
+
+        document.querySelector('.warning-close').addEventListener('click', () => {
+            localStorage.setItem('ad-use', 'true');
+            document.querySelector('.warning').style.animation = " slide-out .50s linear";
+            setTimeout(() => {
+                document.querySelector('.warning').remove();
+            }, 400);
+        });
+
+        document.querySelector('.qr-content').focus();
+
+        document.querySelector('.qr-content').addEventListener('keyup', (key) => {
+            if (key.keyCode == 13) {
+                document.querySelector('.generate-btn').click();
+            }
+        });
+
+
+        document.querySelector('.generate-btn').addEventListener('click', () => {
+            document.activeElement.blur();
+            if (document.querySelector('.qr-content').value.trim() != '') {
+                document.querySelector(".output").style.height = 'fit-content';
+                var qr = new QRious({
+                    value: document.querySelector('.qr-content').value,
+                    size: 500
+                });
+                try {
+                    document.querySelector('.output>span').remove();
+                } catch { }
+                document.querySelector('.output>img').setAttribute('src', qr.toDataURL());
+                document.querySelector('.output>img').style.display = 'block';
+                document.querySelector('.message').style.display = 'block';
+                try {
+                    document.querySelector('.download-btn').remove();
+                }
+                catch { }
+
+                var download_btn = document.createElement('div');
+                download_btn.className = 'download-btn md-ripples ripples-light';
+                download_btn.innerText = 'Download QR Code';
+                download_btn.addEventListener('click', () => {
+                    var qrcode = document.querySelector('.output').querySelector('img').getAttribute('src');
+                    var link = document.createElement("a");
+                    link.setAttribute('hidden', 'true');
+                    link.download = 'qr-code.png';
+                    link.href = qrcode;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    delete link;
+                });
+                document.querySelector('.output').appendChild(download_btn);
+            }
+        });
+    }
+</script>
+
+</html>

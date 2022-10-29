@@ -1,10 +1,10 @@
-# [Qr-Code](https://sancho1952007.github.io/Qr-Code)
+# [Qr-Code](https://qr-makr.netlify.app/)
 Make QR Codes For Free With This Open Source Tool!
 
 <br>
 
 # Website
-Visit It Here: https://sancho1952007.github.io/Qr-Code
+Visit It Here: https://qr-makr.netlify.app/
 
 <br>
 

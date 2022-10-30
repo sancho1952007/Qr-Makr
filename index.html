@@ -17,22 +17,34 @@
 <body>
     <div class="app">
         <div class="input-section">
-            <input type="text" class="qr-content" placeholder="Enter Some Content">
+            <input type="text" class="qr-content" placeholder="Enter Something Here">
             <div class="generate-btn md-ripples ripples-light">
                 <i class="material-icons">qr_code</i>
             </div>
         </div>
+
+        <div class="ads">
+            <div class="advertisement">Advertisement</div>
+            <div class="advertisement2">Advertisement</div>
+        </div>
+
         <div class="output">
-            <span>QR Code Will Display Here</span>
+            <span>Your QR Code Will Be Displayed Here</span>
             <img alt="">
         </div>
         <div class="message">
             Made With ❤️ By, <a href="https://github.com/sancho1952007" target="_blank">Sancho Godinho</a>
         </div>
+
+        <div class="ads">
+            <div class="advertisement">Advertisement</div>
+            <div class="advertisement2">Advertisement</div>
+        </div>
     </div>
 
     <div class="warning">
-        This Site Uses Google Adsense To Display Ads Which May Set Cookies On The Browser For Ad Tracking.<br><br>By
+        This Site Uses Google Adsense To Display Ads Which Helps The Developer. But, May Set Cookies On The Browser For
+        Ad Tracking.<br><br>By
         Continuing Using This Site, You Agree To This.&nbsp;<button class="md-ripples warning-close">Close</button>
     </div>
 </body>
@@ -55,6 +67,38 @@
         overflow: hidden;
     }
 
+    .advertisement2 {
+        display: none !important;
+    }
+
+    .ads {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width:700px) {
+
+        .advertisement,
+        .advertisement2 {
+            width: 50% !important;
+        }
+
+        .advertisement2 {
+            display: flex !important;
+        }
+    }
+
+    .advertisement,
+    .advertisement2 {
+        width: 100%;
+        background-color: lightgrey;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .warning {
         width: calc(100% - 10px);
         position: fixed;
@@ -67,6 +111,8 @@
         padding-bottom: 40px;
         display: none;
         animation: slide-in .50s linear;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
 

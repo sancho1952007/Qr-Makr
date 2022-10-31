@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/neocotic/qrious/dist/qrious.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8814790000166244"
-        crossorigin="anonymous"></script>
+    <script async="async" data-cfasync="false"
+        src="//pistolterrificsuspend.com/efd37c849b179c35590e7b3253b55e70/invoke.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,7 @@
         </div>
 
         <div class="ads">
-            <div class="advertisement">Advertisement</div>
-            <div class="advertisement2">Advertisement</div>
+            <div id="container-efd37c849b179c35590e7b3253b55e70"></div>
         </div>
 
         <div class="output">
@@ -35,17 +34,6 @@
         <div class="message">
             Made With ❤️ By, <a href="https://github.com/sancho1952007" target="_blank">Sancho Godinho</a>
         </div>
-
-        <div class="ads">
-            <div class="advertisement">Advertisement</div>
-            <div class="advertisement2">Advertisement</div>
-        </div>
-    </div>
-
-    <div class="warning">
-        This Site Uses Google Adsense To Display Ads Which Helps The Developer. But, May Set Cookies On The Browser For
-        Ad Tracking.<br><br>By
-        Continuing Using This Site, You Agree To This.&nbsp;<button class="md-ripples warning-close">Close</button>
     </div>
 </body>
 
@@ -65,71 +53,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-    }
-
-    .advertisement2 {
-        display: none !important;
-    }
-
-    .ads {
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    @media screen and (min-width:700px) {
-
-        .advertisement,
-        .advertisement2 {
-            width: 50% !important;
-        }
-
-        .advertisement2 {
-            display: flex !important;
-        }
-    }
-
-    .advertisement,
-    .advertisement2 {
-        width: 100%;
-        background-color: lightgrey;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .warning {
-        width: calc(100% - 10px);
-        position: fixed;
-        background-color: rgb(255, 255, 255, 0.5);
-        backdrop-filter: blur(2px);
-        left: 0;
-        bottom: 0;
-        font-family: monospace;
-        padding: 5px;
-        padding-bottom: 40px;
-        display: none;
-        animation: slide-in .50s linear;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-
-    .warning>button {
-        width: 100%;
-        height: 35px;
-        margin-top: 5px;
-        background-color: rgb(255, 255, 255, 0.2);
-        border: 0;
-        padding: 10px;
-        font-family: 'Barlow', sans-serif;
-        user-select: none;
-        cursor: pointer;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        border-top: 1px solid rgb(53, 53, 53, 0.5);
     }
 
     .app {
@@ -250,18 +173,6 @@
 
 <script>
     window.onload = () => {
-        if (localStorage.getItem('ad-use') == null || localStorage.getItem('ad-use') != "true") {
-            document.querySelector('.warning').style.display = 'block';
-        }
-
-        document.querySelector('.warning-close').addEventListener('click', () => {
-            localStorage.setItem('ad-use', 'true');
-            document.querySelector('.warning').style.animation = " slide-out .50s linear";
-            setTimeout(() => {
-                document.querySelector('.warning').remove();
-            }, 400);
-        });
-
         document.querySelector('.qr-content').focus();
 
         document.querySelector('.qr-content').addEventListener('keyup', (key) => {

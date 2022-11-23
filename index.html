@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Qr Code Maker</title>
-    <meta name="msvalidate.01" content="FA1AED5B95AF2478820D53736ED0627F" />
     <link rel="shortcut icon" href="https://img.icons8.com/parakeet/240/FA5252/qr-code.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/gh/gabrielfins/ripple-effect/dist/ripples.min.js"></script>
@@ -17,8 +16,8 @@
         src="//pistolterrificsuspend.com/b5489cf49332fa5443503e576848be87/invoke.js"></script>
     <script async="async" data-cfasync="false"
         src="//pistolterrificsuspend.com/1158870b50410a13194e71be97407af6/invoke.js"></script>
-    <script type='text/javascript'
-        src='//pistolterrificsuspend.com/23/60/2c/23602c1bf9ded55c7fe4ebc7498698ed.js'></script>
+    <!-- <script type='text/javascript'
+        src='//pistolterrificsuspend.com/23/60/2c/23602c1bf9ded55c7fe4ebc7498698ed.js'></script> -->
 </head>
 
 <body>
@@ -224,6 +223,13 @@
                 document.querySelector('.output').appendChild(download_btn);
             }
         });
+
+        var url = new URLSearchParams(window.location.search);
+        if (url.has('popup_ads') == false && url.get('popup_ads') != 'false') {
+            var script = document.createElement('script');
+            script.src = "//pistolterrificsuspend.com/23/60/2c/23602c1bf9ded55c7fe4ebc7498698ed.js";
+            document.head.appendChild(script);
+        }
     }
 </script>
 
